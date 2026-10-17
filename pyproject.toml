@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swiftapi-native-eos-receipts"
+version = "0.1.0"
+description = "Signed, independently replayable PCCG-2 first-token EOS evidence"
+requires-python = ">=3.11"
+dependencies = ["torch==2.8.0", "numpy==2.3.3", "safetensors==0.6.2", "cryptography==46.0.3"]
+
+[project.optional-dependencies]
+inference = ["transformers==4.56.2", "psutil>=6,<8"]
+production = ["swiftapi-python==1.3.1"]
+
+[project.scripts]
+swiftapi-eos = "swiftapi_eos.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

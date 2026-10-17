@@ -1,0 +1,12 @@
+PCCG-2
+Rayan Pal
+getswiftapi.com
+
+The unmodified content model, tokenizer and configuration in content/ are from
+Qwen/Qwen3-4B, revision 1cfa9a7208912126459214e8b04321603b3df60c.
+https://huggingface.co/Qwen/Qwen3-4B/tree/1cfa9a7208912126459214e8b04321603b3df60c
+The upstream Apache License 2.0 is reproduced in LICENSE.
+
+PCCG-2 adds a separate learned permission branch and evaluation software.
+The Qwen content weights are unmodified. The public file utilities, replay
+launcher and audit paths are adapted for this repository layout.

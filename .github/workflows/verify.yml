@@ -1,0 +1,19 @@
+name: CPU evidence verification
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e .
+      - run: swiftapi-eos fetch-witness
+      - run: swiftapi-eos verify-source
+      - run: swiftapi-eos verify-run --run receipts/replay-002 --trusted-key receipts/replay-002/public.json
+      - run: python tools/run_tests.py

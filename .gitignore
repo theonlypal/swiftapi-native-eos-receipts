@@ -1,0 +1,10 @@
+.venv/
+.deps/
+.authority/
+.cache/
+__pycache__/
+*.egg-info/
+dist/
+*.pem
+*.key
+.DS_Store

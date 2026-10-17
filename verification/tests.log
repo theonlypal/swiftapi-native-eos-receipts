@@ -1,0 +1,20 @@
+test_T10_resigned_wrong_gate (test_receipts.Receipts.test_T10_resigned_wrong_gate) ... ok
+test_T10_resigned_wrong_model (test_receipts.Receipts.test_T10_resigned_wrong_model) ... ok
+test_T11_resigned_forged_token (test_receipts.Receipts.test_T11_resigned_forged_token) ... ok
+test_T12_drop_required_record_even_with_new_signature (test_receipts.Receipts.test_T12_drop_required_record_even_with_new_signature) ... ok
+test_T1_T8_and_revocation (test_receipts.Receipts.test_T1_T8_and_revocation) ... ok
+test_T9_tamper_signature (test_receipts.Receipts.test_T9_tamper_signature) ... ok
+test_atomic_replay_across_connections (test_receipts.Receipts.test_atomic_replay_across_connections) ... ok
+test_auth_veto_before_argmax_non_eos_unchanged (test_receipts.Receipts.test_auth_veto_before_argmax_non_eos_unchanged) ... ok
+test_cannot_invent_second_token (test_receipts.Receipts.test_cannot_invent_second_token) ... ok
+test_future_authorization (test_receipts.Receipts.test_future_authorization) ... ok
+test_non_eos_tamper_even_with_new_manifest (test_receipts.Receipts.test_non_eos_tamper_even_with_new_manifest) ... ok
+test_original_five_arms (test_receipts.Receipts.test_original_five_arms) ... ok
+test_signed_false_allow_is_rejected (test_receipts.Receipts.test_signed_false_allow_is_rejected) ... ok
+test_upstream_source (test_receipts.Receipts.test_upstream_source) ... ok
+test_wrong_trust_anchor (test_receipts.Receipts.test_wrong_trust_anchor) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.873s
+
+OK
