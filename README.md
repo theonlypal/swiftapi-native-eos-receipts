@@ -4,6 +4,8 @@ Verified condition → first-token EOS decision → signed, independently replay
 
 This harness integrates local Ed25519 authorization with the original PCCG-2 decoding boundary. The learned 101-parameter gate remains unchanged. Invalid authorization invokes a separately identified EOS-only veto **before argmax**, not a post-generation output filter.
 
+**Prospective experiment:** [Trusted decoding-boundary preregistration v1](preregistration/TRUSTED_DECODING_BOUNDARY_V1.md). This new registration separates fresh software-boundary execution from independently attested runtime enforcement. It does not retroactively preregister the existing replay results. No new experiment has been executed under it.
+
 ## Three modes, different evidence
 
 | Backend | What runs | Full model needed? |
