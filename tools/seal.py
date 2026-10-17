@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import subprocess
 import zipfile
+import tomllib
 from pathlib import Path
 
 p = argparse.ArgumentParser()
@@ -22,7 +23,8 @@ if a.bundle:
     verify_source(root / ".cache/pccg2")
     paths = names + ["SHA256SUMS"] + [".cache/pccg2/" + n for n in inventory()["files"]]
     folder = root / "dist"; folder.mkdir(exist_ok=True)
-    dest = folder / "swiftapi-native-eos-receipts-v0.1.0.zip"
+    version = tomllib.loads((root / "pyproject.toml").read_text())["project"]["version"]
+    dest = folder / f"swiftapi-native-eos-receipts-v{version}.zip"
     with zipfile.ZipFile(dest, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name in sorted(paths):
             info = zipfile.ZipInfo(name, date_time=(2026, 10, 16, 0, 0, 0))

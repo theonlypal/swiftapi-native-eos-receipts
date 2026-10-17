@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "swiftapi-native-eos-receipts"
-version = "0.1.0"
+version = "0.1.1"
 description = "Signed, independently replayable PCCG-2 first-token EOS evidence"
 requires-python = ">=3.11"
-dependencies = ["torch==2.8.0", "numpy==2.3.3", "safetensors==0.6.2", "cryptography==46.0.3"]
+dependencies = ["torch==2.8.0", "numpy==2.3.3", "safetensors==0.6.2", "cryptography==46.0.3", "packaging==25.0"]
 
 [project.optional-dependencies]
 inference = ["transformers==4.56.2", "psutil>=6,<8"]

@@ -33,7 +33,7 @@ Qualification used an existing Python 3.12 environment with Torch 2.8.0, NumPy 2
 
 - Fresh inference: **UNAVAILABLE_HARDWARE**. Available memory 2,518,106,112 bytes; conservative required memory 14,214,956,648 bytes; locally present model shards 8,044,982,000 bytes. No Qwen forward pass occurred. CPU/MPS code is provided but full-model execution is not empirically qualified here.
 - Production SwiftAPI issuance/integration: **NOT LIVE QUALIFIED**. The optional adapter uses the SDK interface, but the default CLI intentionally exposes only the tested local authority. No production signature, credential or remote revocation response was fabricated.
-- GitHub CI execution is separate from local tests. This report does not claim a remote workflow passed.
+- GitHub CI execution is separate from local tests. Initial run 38988860809 caught a missing `packaging` dependency after source verification. Version 0.1.1 explicitly pins it. Consult the corresponding commit's workflow for the remote verdict; this report does not predeclare it passed.
 - Signature authenticity is not hardware execution attestation. Fresh captured-vector verification would substantiate token selection from captured logits, not independently recompute the content model.
 - The authority is local and self-issued. External identity, tamper-resistant enforcement and globally synchronized replay/revocation are not established.
 
